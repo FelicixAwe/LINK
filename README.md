@@ -136,7 +136,7 @@ TODO
 
 Created by <a href="http://www.lucidchart.com">LucidChart</a>
 
-![ERD Diagram][ERD Diagram]
+<img src="./Database ER diagram.png">
 
 <!-- LICENSE -->
 
@@ -178,4 +178,3 @@ TODO
 [Socket-url]: https://www.socket.io/
 [Planetscale]: https://img.shields.io/badge/Planetscale-000000?style=for-the-badge&logo=planetscale&logoColor=white
 [Planetscale-url]: https://www.planetscale.com/
-[ERD Diagram]: ./Database-ER-diagram.png
