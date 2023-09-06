@@ -116,19 +116,28 @@ TODO
 - [x] Invitation and invitation url generate
 - [x] server settings: invite, member manage, edit channel and delete / leave server
 - [x] Add Changelog
-- [ ] Add back to top links
-- [ ] Complete search channel list
-- [ ] Edit channel, channel ID page and chat header
-- [ ] Conversation
-  - [ ] Socket IO Set up
-  - [ ] Messages API
-  - [ ] Emoji bar
-  - [ ] Chat message component
-  - [ ] Chat Item component
+- [x] Add back to top links
+- [x] Complete search channel list
+- [x] Edit channel, channel ID page and chat header
+- [x] Complete prisma model: Conversation, directConversation, Message
+- [x] Conversation set up
+- [x] Socket IO Set up
+- [ ] Messages API
+- [ ] Emoji bar
+- [ ] Chat message component
+- [ ] Chat Item component
 - [ ] Video calls
 - [ ] Deployment
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- DATABASE ER DIAGRAM -->
+
+## Database ER Diagram
+
+Created by <a href="http://www.lucidchart.com">LucidChart</a>
+
+<img src="./Database ER diagram.png">
 
 <!-- LICENSE -->
 
