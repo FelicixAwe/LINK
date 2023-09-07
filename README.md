@@ -122,12 +122,14 @@ TODO
 - [x] Complete prisma model: Conversation, directConversation, Message
 - [x] Conversation set up
 - [x] Socket IO Set up
-- [ ] Messages API
-- [ ] Emoji bar
-- [ ] Chat message component
-- [ ] Chat Item component
-- [ ] Video calls
-- [ ] Deployment
+- [x] Messages API
+- [x] Message Attachment
+- [x] Emoji bar
+- [x] Chat message component
+- [x] Chat Item component
+- [x] Video calls
+- [x] Deployment
+- [x] Stress Test
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

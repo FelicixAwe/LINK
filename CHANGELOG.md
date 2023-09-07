@@ -10,6 +10,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Added
 
+## 0.0.4 - 2023-09-06
+
+### Added
+
+- Message API build
+- Message Attachment
+- Emoji bar
+- Chat Item Component
+- Video calls
+- Deployment
+- Stress Test
+
+### Fixed
+
+- README.md modified
+
+## 0.0.3 -2023-09-05
+
+### Fixed
+- CHANGELOG.md modified
+
 ## 0.0.2 - 2023-09-05
 
 ### Added
@@ -22,6 +43,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 ### Fixed
 
 - README.md modified
+- Database ER Diagram display
 
 <!-- ## [0.0.1] - 2023-09-04 -->
 ## 0.0.1 - 2023-09-04
