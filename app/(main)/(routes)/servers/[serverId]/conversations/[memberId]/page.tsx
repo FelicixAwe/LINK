@@ -13,13 +13,16 @@ interface MemberIdPageProps {
   params: {
     memberId: string;
     serverId: string;
-  };
+  },
   searchParams: {
     video?: boolean;
-  };
+  }
 }
 
-const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
+const MemberIdPage = async ({
+  params,
+  searchParams,
+}: MemberIdPageProps) => {
   const profile = await currentProfile();
 
   if (!profile) {
@@ -40,10 +43,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
     return redirect("/");
   }
 
-  const conversation = await getOrCreateConversation(
-    currentMember.id,
-    params.memberId
-  );
+  const conversation = await getOrCreateConversation(currentMember.id, params.memberId);
 
   if (!conversation) {
     return redirect(`/servers/${params.serverId}`);
@@ -51,10 +51,9 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
 
   const { memberOne, memberTwo } = conversation;
 
-  const otherMember =
-    memberOne.profileId === profile.id ? memberTwo : memberOne;
+  const otherMember = memberOne.profileId === profile.id ? memberTwo : memberOne;
 
-  return (
+  return ( 
     <div className="bg-white dark:bg-[#313338] flex flex-col h-full">
       <ChatHeader
         imageUrl={otherMember.profile.imageUrl}
@@ -63,7 +62,11 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
         type="conversation"
       />
       {searchParams.video && (
-        <MediaRoom chatId={conversation.id} video={true} audio={true} />
+        <MediaRoom
+          chatId={conversation.id}
+          video={true}
+          audio={true}
+        />
       )}
       {!searchParams.video && (
         <>
@@ -91,7 +94,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
         </>
       )}
     </div>
-  );
-};
-
+   );
+}
+ 
 export default MemberIdPage;

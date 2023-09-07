@@ -1,6 +1,8 @@
 "use client";
 
-import { useModal } from "@/hooks/use-modal-store";
+import axios from "axios";
+import { Check, Copy, RefreshCw } from "lucide-react";
+import { useState } from "react";
 
 import {
   Dialog,
@@ -9,12 +11,10 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
+import { useModal } from "@/hooks/use-modal-store";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Check, Copy, RefreshCw } from "lucide-react";
 import { useOrigin } from "@/hooks/use-origin";
-import { useState } from "react";
-import axios from "axios";
 
 export const InviteModal = () => {
   const { onOpen, isOpen, onClose, type, data } = useModal();
@@ -40,10 +40,7 @@ export const InviteModal = () => {
   const onNew = async () => {
     try {
       setIsLoading(true);
-
-      const response = await axios.patch(
-        `/api/servers/${server?.id}/invite-code`
-      );
+      const response = await axios.patch(`/api/servers/${server?.id}/invite-code`);
 
       onOpen("invite", { server: response.data });
     } catch (error) {
@@ -51,7 +48,7 @@ export const InviteModal = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
@@ -62,8 +59,10 @@ export const InviteModal = () => {
           </DialogTitle>
         </DialogHeader>
         <div className="p-6">
-          <Label className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
-            Server Invite Link
+          <Label
+            className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70"
+          >
+            Server invite link
           </Label>
           <div className="flex items-center mt-2 gap-x-2">
             <Input
@@ -72,11 +71,10 @@ export const InviteModal = () => {
               value={inviteUrl}
             />
             <Button disabled={isLoading} onClick={onCopy} size="icon">
-              {copied ? (
-                <Check className="w-4 h-4" />
-              ) : (
-                <Copy className="w-4 h-4" />
-              )}
+              {copied 
+                ? <Check className="w-4 h-4" /> 
+                : <Copy className="w-4 h-4" />
+              }
             </Button>
           </div>
           <Button
@@ -92,5 +90,5 @@ export const InviteModal = () => {
         </div>
       </DialogContent>
     </Dialog>
-  );
-};
+  )
+}

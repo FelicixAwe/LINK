@@ -24,11 +24,12 @@
 <div align="center">
 
   <h3 align="center">LINK - Discord Clone Project</h3>
+  <img src="./mockup.jpg">
 
   <p align="center">
     <br />
     <br />
-    <a href="https://github.com/FelicixAwe/LINK">View Demo</a>
+    <a href="https://felicixawe-link.up.railway.app/">View Demo</a>
     ·
   </p>
 </div>
@@ -45,14 +46,10 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
+    <!-- <li><a href="#license">License</a></li> -->
   </ol>
 </details>
 
@@ -71,6 +68,9 @@ Main Features:
 - Server creation and customization
 - Member management: kick, role change for guest or moderator
 - Create text, audio and video channels
+- 1:1 conversation between members
+- 1:1 video calls between members
+- Unique invite link generation & full working invite system
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,18 +90,27 @@ Main Features:
 
 ## Getting Started
 
-TODO
+### Install packages
 
-### Prerequisites
+```shell
+npm i
+```
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+### Setup Prisma
 
-### Installation
+Add MySQL Database (PlanetScale used)
 
-TODO
+```shell
+npx prisma generate
+npx prisma db push
+
+```
+
+### Start the app
+
+```shell
+npm run dev
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,13 +150,13 @@ Created by <a href="http://www.lucidchart.com">LucidChart</a>
 
 <img src="./Database ER diagram.png">
 
-<!-- LICENSE -->
+<!-- LICENSE
 
 ## License
 
 TODO
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ACKNOWLEDGMENTS -->
 
