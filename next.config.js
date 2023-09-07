@@ -11,7 +11,9 @@ const nextConfig = {
   images: {
     domains: ["utfs.io"],
   },
-  swcMinify: false,
+  experimental: {
+    swcMinify: false,
+  },
 };
 
 module.exports = nextConfig;
