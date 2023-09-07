@@ -13,6 +13,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 ## 0.0.5 - 2023-09-06
 
 ### Fixed
+- channelType existance bug in components/modals/create-channel-modal.tsx
+
+## 0.0.5 - 2023-09-06
+
+### Fixed
 - property.id type bug in app/(setup)/page.tsx
 
 ## 0.0.4 - 2023-09-06
