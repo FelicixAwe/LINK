@@ -30,12 +30,12 @@ export const EmojiPicker = ({ onChange }: EmojiPickerProps) => {
         sideOffset={40}
         className="bg-transparent border-none shadow-none drop-shadow-none mb-16"
       >
-        <Picker
+        {/* <Picker
           theme={resolvedTheme}
           data={data}
           onEmojiSelect={(emoji: any) => onChange(emoji.native)}
-        />
-        {/* <div className="hidden">
+        /> */}
+        <div className="hidden">
           <Picker
             theme={resolvedTheme}
             data={async () => {
@@ -47,7 +47,7 @@ export const EmojiPicker = ({ onChange }: EmojiPickerProps) => {
             }}
             onEmojiSelect={(emoji: any) => onChange(emoji.native)}
           />
-        </div> */}
+        </div>
       </PopoverContent>
     </Popover>
   );
