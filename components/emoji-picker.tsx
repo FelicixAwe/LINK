@@ -35,17 +35,19 @@ export const EmojiPicker = ({ onChange }: EmojiPickerProps) => {
           data={data}
           onEmojiSelect={(emoji: any) => onChange(emoji.native)}
         /> */}
-        <Picker
-          theme={resolvedTheme}
-          data={async () => {
-            const response = await fetch(
-              "https://cdn.jsdelivr.net/npm/@emoji-mart/data/sets/14/native.json"
-            );
+        <div className="hidden">
+          <Picker
+            theme={resolvedTheme}
+            data={async () => {
+              const response = await fetch(
+                "https://cdn.jsdelivr.net/npm/@emoji-mart/data/sets/14/native.json"
+              );
 
-            return response.json();
-          }}
-          onEmojiSelect={(emoji: any) => onChange(emoji.native)}
-        />
+              return response.json();
+            }}
+            onEmojiSelect={(emoji: any) => onChange(emoji.native)}
+          />
+        </div>
       </PopoverContent>
     </Popover>
   );
